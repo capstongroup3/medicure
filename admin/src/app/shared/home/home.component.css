@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  text-align: center;
+  padding: 50px;
+}
+
+.intro, .about-us, .services, .technology, .metrics, .testimonial, .contact-us {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+.intro h1, .about-us h2, .services h2, .technology h2, .contact-us h2, .testimonial-content h3 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.intro p, .about-us p, .services p, .technology p, .contact-us p, .testimonial-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 15px 30px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.get-started {
+  background-color: #004d40;
+  color: white;
+}
+
+.learn-more {
+  background-color: #5c6bc0;
+  color: white;
+}
+
+.trust-score {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.trust-score div {
+  text-align: left;
+}
+
+.score, .rating, .stars {
+  display: block;
+}
+
+.about-us h2, .services h2, .technology h2, .contact-us h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.service-item {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.service-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.service-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 16px;
+}
+
+.aws-logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.metrics {
+  display: flex;
+  justify-content: space-around;
+}
+
+.metric {
+  text-align: center;
+}
+
+.metric-title {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.metric-value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  text-align: left;
+}
+
+.testimonial-text {
+  flex: 1;
+}
+
+.testimonial-image {
+  flex: 0 0 200px;
+  margin-left: 20px;
+}
+
+.testimonial-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.testimonial-content h3 {
+  font-size: 20px;
+  color: #5c6bc0;
+  margin-bottom: 20px;
+}
+
+.testimonial-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.stars {
+  font-size: 24px;
+  color: #ffd700;
+}
+
+.contact-us h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-us p {
+  font-size: 16px;
+}

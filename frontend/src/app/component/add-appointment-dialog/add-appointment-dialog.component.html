@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Add Appointment</h1>
+<div mat-dialog-content>
+  <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Patient Name</mat-label>
+      <input matInput formControlName="pname">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="phone">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Patient Age</mat-label>
+      <input matInput formControlName="p_age">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Appointment Date</mat-label>
+      <input matInput formControlName="a_date" type="date" [disabled]="true">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Appointment Time</mat-label>
+      <input matInput formControlName="a_time" type="time" [disabled]="true">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Problem</mat-label>
+      <input matInput formControlName="problem">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button [disabled]="!appointmentForm.valid" (click)="onSubmit()">Submit</button>
+</div>

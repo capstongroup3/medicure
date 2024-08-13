@@ -1,0 +1,17 @@
+.btn {
+    margin-right: 20px;
+ }
+ .back {
+    margin-bottom: 10px;
+ }
+ .custom-dialog-container {
+    transform: translate(-50%, -50%);
+    position: fixed;  /* Ensure the dialog is positioned relative to the viewport */
+    top: -20%;
+    left: 30%;
+    max-width: 400px;
+    max-height: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  

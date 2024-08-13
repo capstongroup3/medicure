@@ -1,0 +1,84 @@
+/* General styling for the dialog container */
+mat-dialog-container {
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Dialog title */
+h1[mat-dialog-title] {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form fields styling */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+mat-form-field input,
+mat-form-field textarea,
+mat-form-field select {
+  font-size: 14px;
+}
+
+mat-form-field mat-label {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Add some padding inside input fields for better spacing */
+mat-form-field input::placeholder {
+  color: #bbb;
+  height: 50px;
+}
+
+/* Style the dialog action buttons */
+div[mat-dialog-actions] {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+button[mat-button] {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+button[mat-button]:disabled {
+  background-color: #ccc;
+  color: #fff;
+}
+
+/* Specific styling for 'Submit' button */
+button[mat-button]:not([disabled]) {
+  background-color: #3f51b5;
+  color: #fff;
+}
+
+button[mat-button]:not([disabled]):hover {
+  background-color: #303f9f;
+}
+
+/* Adjusting padding and margin for better layout on small screens */
+@media (max-width: 600px) {
+  mat-dialog-container {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  h1[mat-dialog-title] {
+    font-size: 20px;
+  }
+
+  button[mat-button] {
+    font-size: 12px;
+  }
+}

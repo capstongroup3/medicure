@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-sm">
+          <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">Anxiety Assessment</h2>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="assessmentForm" (ngSubmit)="onSubmit()">
+              <div *ngFor="let question of anxietyQuestions; let i = index" class="form-group">
+                <label [for]="'q' + (i + 1) + '_score'" class="font-weight-bold">{{ question }}</label>
+                <select [id]="'q' + (i + 1) + '_score'" [formControlName]="'q' + (i + 1) + '_score'" class="form-control">
+                  <option *ngFor="let option of anxietyOptions" [value]="option.value">{{ option.label }}</option>
+                </select>
+                <div *ngIf="assessmentForm.controls['q' + (i + 1) + '_score'].invalid && (assessmentForm.controls['q' + (i + 1) + '_score'].dirty || assessmentForm.controls['q' + (i + 1) + '_score'].touched)" class="text-danger">
+                  This question is required.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="date" class="font-weight-bold">Date</label>
+                <input type="date" id="date" formControlName="date" class="form-control" readonly />
+              </div>
+              <div class="form-group">
+                <label for="time" class="font-weight-bold">Time</label>
+                <input type="time" id="time" formControlName="time" class="form-control" readonly />
+              </div>
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary mr-2">Add Assessment</button>
+                <button type="button" class="btn btn-secondary" (click)="back()">Back</button>
+              </div>
+            </form>
+            <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+              {{ errorMessage }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

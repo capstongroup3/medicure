@@ -1,0 +1,59 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <app-navbar></app-navbar>
+<div class="container">
+    <h2>Appointment List</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>PName</th>
+          <th>Phone</th>
+          <th>P_Age</th>
+          <th>A_Date</th>
+          <th>A_Time</th>
+          <th>Problem</th>
+          <th>Doc_ID</th>
+          <th>Pat_ID</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of appointments">
+          <td>{{ appointment.pname }}</td>
+          <td>{{ appointment.phone }}</td>
+          <td>{{ appointment.p_age }}</td>
+          <td>{{ appointment.a_date  | date: 'yyyy-MM-dd' }}</td>
+          <td>{{ appointment.a_time }}</td>
+          <td>{{ appointment.problem }}</td>
+          <td>{{ appointment.doc_id.name }}</td>
+          <td>{{ appointment.pat_id.name }}</td>
+          <td>
+            <ng-container *ngIf="appointment.isAccepted === 'pending'">
+              <button class="btn btn-success btn-sm" (click)="confirmAction('accepted', appointment)">
+                <i class="fas fa-check"></i> Accept
+              </button>
+              <button class="btn btn-danger btn-sm" (click)="confirmAction('rejected', appointment)">
+                <i class="fas fa-times"></i> Reject
+              </button>
+            </ng-container>
+            <ng-container *ngIf="appointment.isAccepted === 'accepted'">
+              <button class="btn btn-outline-success btn-sm" disabled>
+                <i class="fas fa-check"></i> Accepted
+              </button>
+            </ng-container>
+            <ng-container *ngIf="appointment.isAccepted === 'rejected'">
+              <button class="btn btn-outline-danger btn-sm" disabled>
+                <i class="fas fa-times"></i> Rejected
+              </button>
+            </ng-container>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <app-footer></app-footer>
+
+  
+  
+  

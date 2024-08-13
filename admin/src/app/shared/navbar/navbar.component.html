@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" (click)="homepage()">
+      <img src="assets/images/logo.jpg" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Our Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <a class="dropdown-item" href="#">Service 1</a>
+            <a class="dropdown-item" href="#">Service 2</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Patient Resources
+          </a>
+          <div class="dropdown-menu" aria-labelledby="resourcesDropdown">
+            <a class="dropdown-item" href="#">Resource 1</a>
+            <a class="dropdown-item" href="#">Resource 2</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="aboutUsNavigation()">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="careersDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Careers
+          </a>
+          <div class="dropdown-menu" aria-labelledby="careersDropdown">
+            <a class="dropdown-item" href="#">Career 1</a>
+            <a class="dropdown-item" href="#">Career 2</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="contactUsNavigation()">Contact Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="referralsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Referrals
+          </a>
+          <div class="dropdown-menu" aria-labelledby="referralsDropdown">
+            <a class="dropdown-item" href="#">Referral 1</a>
+            <a class="dropdown-item" href="#">Referral 2</a>
+          </div>
+        </li>
+      </ul>
+      <div class="navbar-buttons">
+        <button *ngIf="!isLoggedIn" class="btn btn-outline-light" (click)="navigateToLogin()">Login</button>
+        <button *ngIf="!isLoggedIn" class="btn btn-outline-light" (click)="navigateToSignup()">Sign Up</button>
+        <button *ngIf="isLoggedIn" class="btn btn-warning ml-3" (click)="navigateToProfile()">Profile</button>
+        <button *ngIf="isLoggedIn" class="btn btn-outline-light ml-3" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  

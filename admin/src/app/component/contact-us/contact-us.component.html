@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="contact-us-container">
+    <h2>Contact Us for an Appointment</h2>
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" required [(ngModel)]="contact.name" name="name" class="form-control" />
+      </div>
+  
+      <div class="form-group">
+        <label for="number">Number</label>
+        <input type="tel" id="number" required [(ngModel)]="contact.number" name="number" class="form-control" />
+      </div>
+  
+      <div class="form-group">
+        <label for="reason">Reason for Appointment</label>
+        <textarea id="reason" required [(ngModel)]="contact.reason" name="reason" class="form-control"></textarea>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  
+<app-footer></app-footer>

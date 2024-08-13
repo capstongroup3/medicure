@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<div class="profile-container" *ngIf="user">
+  <h1>{{ user.name }}'s Profile</h1>
+  <div class="profile-details">
+    <p><strong>Username:</strong> {{ user.name }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>User Type:</strong> {{ user.userType }}</p>
+  </div>
+</div>
+<app-footer></app-footer>

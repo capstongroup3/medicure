@@ -1,0 +1,89 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<app-navbar></app-navbar>
+
+<div class="container">
+  <section class="intro">
+    <h1>Helping people feel better, faster</h1>
+    <p>Dr-Julian provides tele and virtual health solutions to care providers, reducing waiting lists and helping more people feel better, faster.</p>
+    <div class="buttons">
+      <button class="get-started" (click)="getAppointments()">Appointments</button>
+      <button class="learn-more" (click)="getSchedules()">Schedules</button>
+      <button class="get-started" (click)="getAssessment()">Assessments</button>
+    </div>
+    <div class="trust-score">
+      <div>
+        <span class="score">TrustScore</span>
+        <span class="rating">4.8</span>
+        <span class="stars">★★★★★</span>
+      </div>
+      <div>
+        <span class="category">Category Average (Mental Health Average)</span>
+        <span class="rating">3.5</span>
+        <span class="stars">★★★★☆</span>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-item">
+      <img src="../../../assets/images/11.jpg" alt="Service 1">
+      <h3>Virtual Consultations</h3>
+      <p>Connect with healthcare professionals from the comfort of your home through our secure video platform.</p>
+    </div>
+    <div class="service-item">
+      <img src="../../../assets/images/12.jpg" alt="Service 2">
+      <h3>Online Prescriptions</h3>
+      <p>Receive prescriptions and medical advice online without the need for a physical visit.</p>
+    </div>
+    <div class="service-item">
+      <img src="../../../assets/images/13.jpg" alt="Service 3">
+      <h3>Mental Health Support</h3>
+      <p>Access a wide range of mental health services, including therapy and counseling, tailored to your needs.</p>
+    </div>
+  </section>
+
+  <section class="technology">
+    <h2>Proven, Award-Winning Technology</h2>
+    <img src="../../../assets/images/service.jpg" alt="AWS Healthcare Accelerator" class="aws-logo">
+    <p>Thousands of virtual appointments delivered by our proprietary video, voice, and text technology platform every week - built, managed, and operated in-house.</p>
+  </section>
+
+  <section class="metrics">
+    <div class="metric">
+      <span class="metric-title">Non-Attendance Reduction</span>
+      <span class="metric-value">50%</span>
+    </div>
+    <div class="metric">
+      <span class="metric-title">Dropouts Reduction</span>
+      <span class="metric-value">49.8%</span>
+    </div>
+    <div class="metric">
+      <span class="metric-title">Reliable Improvement vs NHS</span>
+      <span class="metric-value">80% vs 68%</span>
+    </div>
+  </section>
+
+  <section class="testimonial">
+    <div class="testimonial-content">
+      <div class="testimonial-text">
+        <h3>Milton Keynes Talking Therapies Service (IAPT)</h3>
+        <p>"Dr-Julian has been indispensable to the Milton Keynes IAPT service in recent years. Their service has helped us to manage wait lists when we've been unable to source our own workers; and we have the flexibility to increase this capacity too as and when it’s needed."</p>
+        <p><strong>Jake Thorpe (he/him)</strong><br>Team Manager at Milton Keynes Talking Therapies Service (IAPT),<br>February 2023</p>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="testimonial-image">
+        <img src="../../../assets/images/1.jpg" alt="Testimonial Image">
+      </div>
+    </div>
+  </section>
+
+  
+</div>
+
+<app-footer></app-footer>
